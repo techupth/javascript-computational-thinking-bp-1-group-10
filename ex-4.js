@@ -1,3 +1,5 @@
+// Exercise4: Movies
+
 const movies = [
   {
     title: "The Shawshank Redemption",
@@ -16,7 +18,12 @@ const movies = [
 
 function findMoviesByYear(movies, year) {
   // Start coding here
-}
+  return movies.filter(movie => {
+    let movieYear = new Date(movie.releaseDate).getFullYear();
+    return movieYear === year;
+  }
+  )
+};
 
 console.log(findMoviesByYear(movies, 1994));
 
